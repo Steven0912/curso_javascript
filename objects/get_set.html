@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+<script>
+
+    // Getter and Setter
+
+    var curso = {
+        titulo: "Curso javascript",
+        videos: 19,
+        tutor_value: "Uriel",
+        get tutor() {
+            return this.tutor_value.toUpperCase();
+        },
+        set tutor(tutor) {
+            if (tutor === "" || (typeof tutor === "undefined")) {
+                return;
+            }
+            this.tutor_value = tutor;
+        }
+        /* Manera vieja de hacer el get and set
+        getTutor: function () {
+         return this.tutor.toUpperCase();
+         },
+         setTutor: function (tutor) {
+         if (tutor === "" || (typeof tutor === "undefined")) {
+         return;
+         }
+         this.tutor = tutor;
+         }*/
+    };
+
+    curso.tutor = "Steven";
+    console.log(curso.tutor);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+<script>
+
+    //ver prototipos como los objetos
+
+    function Tutor(nombre, apellido) {
+        this.nombre = nombre;
+        this.saludar = function () {
+            console.log("Hola soy " + this.nombre);
+        };
+        if (typeof apellido !== "undefined") {
+            this.nombre_completo = nombre + " " + apellido;
+        }
+    }
+
+    Tutor.prototype.edad = 19;
+    Tutor.prototype.iniciar_tutorial = function () {
+        console.log("Bienvenidos a este nuevo tutorial");
+    };
+
+    var Steven = new Tutor("Steven", "Ceballos");
+    var luis = new Tutor("Luis", "Preuba");
+
+    console.log(Steven.edad);
+    console.log(luis.edad);
+
+    Steven.iniciar_tutorial();
+    luis.iniciar_tutorial();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+<script>
+    function Tutor(nombre, apellido) {
+        this.nombre = nombre;
+        this.saludar = function () {
+            console.log("Hola soy " + this.nombre);
+        };
+        if (typeof apellido !== "undefined") {
+            this.nombre_completo = nombre + " " + apellido;
+        }
+    }
+
+    var Steven = new Tutor("Steven", "Ceballos");
+    Steven.saludar();
+
+    console.log(Steven.nombre_completo);
+
+    var jose = new Tutor("Jose");
+    jose.saludar();
+</script>
+</body>
+</html>

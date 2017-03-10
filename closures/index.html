@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+<button id="btn">Click</button>
+<script>
+
+    // esto es un closure, funciones dentro de otra funcion
+    (function () {
+
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log("hizo click");
+        });
+
+        // Callback - funcion anonima que se pasa como parametro
+        setTimeout(function () {
+            console.log(hola_mundo("Steven"));
+        }, 3000);
+
+    })();
+
+    function hola_mundo(nombre) {
+        function construct() {
+            return "Hola " + nombre;
+        }
+
+        return construct();
+    }
+
+</script>
+</body>
+</html>

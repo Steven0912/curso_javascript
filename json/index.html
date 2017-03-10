@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+<script>
+    var arreglos = [1, 2, 3, 4];
+
+    var curso = {
+        titulo: "Curso javascript",
+        videos: 19,
+        tutor: "Uriel",
+        introduccion: function () {
+            console.log("Bienvenido al curso: " + this.titulo + " que tiene " + this.videos + " videos")
+        }
+    };
+
+    // primera forma de obtener datos de json
+    console.log(curso["titulo"]);
+
+    //segunda forma
+    console.log(curso.introduccion());
+</script>
+</body>
+</html>
